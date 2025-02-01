@@ -3,6 +3,8 @@ The goal of this project was to compare the performance of different classifiers
 
 The data is related with direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to access if the product (bank term deposit) would be ('yes') or not ('no') subscribed. The classification goal is to predict if the client will subscribe to a term deposit (CD).
 
+The Jupyter Notebook containing my work can be found [here](https://github.com/jferris57/Comparing-Different-Classifiers/blob/main/Comparing_Different_Classifiers.ipynb) .
+
 ## Data Understanding
 Additional information regarding the features and what they mean:
 
@@ -143,7 +145,8 @@ Here are the param grids for each model:
 
 ![image](https://github.com/user-attachments/assets/e68d2f5d-8874-44ff-953a-70295e73e88a)
 
-![image](https://github.com/user-attachments/assets/36bfe0b0-5473-4039-a6c5-a0c6cb4013b8)
+![image](https://github.com/user-attachments/assets/baca4cc4-2129-4695-8e0f-87e42ca5b241)
+
 
 ## Next Steps
 
