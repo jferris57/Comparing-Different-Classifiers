@@ -64,7 +64,96 @@ After reading the description of the features, it says regarding the duration co
 
 After initial examination of the data, I saw there were no missing values. I looked into the values of the 'default' column and noticed out of the entire dataset, only 3 people were confirmed to have credit in default. The rest did not or it was unknown. I don't believe this will be of much use to us so I removed it.
 
-Looking into the count of the target value, we can see that the data for the two classes is very imbalanced. 88.7% of the clients responded 'no' and 11.3% responded yes. That's 36,548 no's and 4,640 yes's.
+Looking into the count of the target value, it's clear that the classes are very imbalanced. 88.7% of the clients responded 'no' and 11.3% responded yes. That's 36,548 no's and 4,640 yes's.
 
 ![class](https://github.com/user-attachments/assets/cdba4d95-3cf5-4321-84f4-0e3d2a652b05)
+
+We can see that most of the people that were contacted were in their 20's, 30's and 40's. Of those who did subscribe, most of them were in their late 20's and 30's.
+
+![age](https://github.com/user-attachments/assets/9996ce2d-832b-48b9-9a45-76bd3e2c69d3)
+
+![age-by-class](https://github.com/user-attachments/assets/865e7aab-5fc8-40f1-88f0-ed2f74856535)
+
+![age-by-job](https://github.com/user-attachments/assets/db8df56d-c18d-4ce0-b6a2-0b5947aad5b8)
+
+Those who subscribed mostly held administrative jobs followed by technicians and blue-collar workers.
+
+![job-type](https://github.com/user-attachments/assets/22733f88-a9a1-4c7b-a91b-c998f566b2ff)
+
+Most subscriptions came from married people, followed those who were single and divorced. However, the highest subscription rate came from those who were single at 14%.
+
+![marital-status](https://github.com/user-attachments/assets/de9af364-4180-484f-b70d-2f8a7b841df7)
+
+Married subscription %: 10.16
+
+Single subscription %: 14.0
+
+Divorced subscription %: 10.32
+
+When filtering by education level, the highest amount of subscriptions came from those who hold a university degree.
+
+![education](https://github.com/user-attachments/assets/e9883a5a-5747-4ade-8cff-2bdd1ca7024d)
+
+Lastly, there was higher enrollment from the clients who were never contacted before or subscribed previously (previous successful campaign).
+
+![previous-campaign](https://github.com/user-attachments/assets/74fa0a61-e310-49f7-af8b-4882be6fd05c)
+
+I also plotted a correlation matrix of the numerical values as a heatmap. We can see high correlations between things like euribor 3 month rate and employment variation rate, consumer price index and employment variation rate.
+
+![correlation](https://github.com/user-attachments/assets/d1882eb6-a670-4ad8-8ee2-ab8dcd8ad1ac)
+
+## Understanding the Business Objective
+
+The primary objective of this task is to develop a model that can accurately predict potential customers who will subscribe to a bank term deposit. The model will use data from bank clients (age, job, marital status, loans), previous interactions (outcome of a previous campaign), and social and economic factors. The business objective is to increase subscription rate for bank term deposits by identifying the most likely candidates.
+
+I believe that given the fact we are trying to identify the most likely candidates, the bank wants to avoid spending time and resources on candidates who are not likely to subscribe. Because of this, I think maximizing precision and reducing false positives will be most important.
+
+## Modeling
+
+### Baseline Model
+
+Before we build our first model, we want to establish a baseline. I chose to build a dummy classifier as our baseline model. The performance was not great:
+
+Dummy Classifier Performance:
+
+Accuracy: 0.7994658897790726
+
+Precision: 0.10561056105610561
+
+Recall: 0.10267379679144385
+
+F1 Score: 0.10412147505422993
+
+### Simple Models
+
+I then trained a Logistic Regression model, KNN model, Decision Tree, and SVM model all with default parameters. I tracked the training time and training/test accuracy. Here were the results:
+
+![image](https://github.com/user-attachments/assets/78858de6-a5ec-46e6-83ce-3e7b78e99238)
+
+### Improving the Models
+
+With some basic models trained, we want to improve them. I used GridSearch for hyperparameter tuning and to find the best parameters for our models.
+
+Here are the param grids for each model:
+
+![image](https://github.com/user-attachments/assets/ef8cdbc0-02d2-4e9f-bc1c-ce79feac8975)
+
+![image](https://github.com/user-attachments/assets/2eefb287-6ccb-4bbc-b97e-844e623f8d24)
+
+![image](https://github.com/user-attachments/assets/e68d2f5d-8874-44ff-953a-70295e73e88a)
+
+![image](https://github.com/user-attachments/assets/36bfe0b0-5473-4039-a6c5-a0c6cb4013b8)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
