@@ -128,7 +128,8 @@ F1 Score: 0.10412147505422993
 
 I then trained a Logistic Regression model, KNN model, Decision Tree, and SVM model all with default parameters. I tracked the training time and training/test accuracy. Here were the results:
 
-![image](https://github.com/user-attachments/assets/78858de6-a5ec-46e6-83ce-3e7b78e99238)
+![image](https://github.com/user-attachments/assets/702ece6b-f0bc-4a0c-82cb-8554274e8917)
+
 
 ### Improving the Models
 
@@ -144,6 +145,9 @@ Here are the param grids for each model:
 
 ![image](https://github.com/user-attachments/assets/36bfe0b0-5473-4039-a6c5-a0c6cb4013b8)
 
+## Next Steps
+
+The next steps in our project timeline would be to deploy the best model and track its performance. I would have the employees of the bank give feedback on how well it is performing. I would monitor the model's performance to identify any areas that need improvement. I would update the model with new data as often as possible. I would gather data from the bank's client interactions and new marketing campaigns to improve the model's accuracy and precision. Experts working at the bank may have additional insight that could lead to new features for our model to train on that may help its accuracy and precision. Ultimately, we want to increase the efficiency of the bank's marketing campaigns so there are no wasted resources and they can successfully identify more customers likely to subscribe to term deposits.
 
 
 
