@@ -137,16 +137,21 @@ I then trained a Logistic Regression model, KNN model, Decision Tree, and SVM mo
 
 With some basic models trained, we want to improve them. I used GridSearch for hyperparameter tuning and to find the best parameters for our models.
 
-Here are the param grids for each model:
+Here are the param grids for each model, showing fit time, accuracy, precision, recall, and F1 score:
 
-![image](https://github.com/user-attachments/assets/ef8cdbc0-02d2-4e9f-bc1c-ce79feac8975)
+![image](https://github.com/user-attachments/assets/02af475a-42af-4e9a-a06a-8f818735a278)
 
-![image](https://github.com/user-attachments/assets/2eefb287-6ccb-4bbc-b97e-844e623f8d24)
+![image](https://github.com/user-attachments/assets/6c2ce2e0-6151-4583-ab85-4ac2ec8b62d8)
 
-![image](https://github.com/user-attachments/assets/e68d2f5d-8874-44ff-953a-70295e73e88a)
+![image](https://github.com/user-attachments/assets/56ab5bf3-b970-4376-bf47-534bb5e95ccd)
 
-![image](https://github.com/user-attachments/assets/baca4cc4-2129-4695-8e0f-87e42ca5b241)
+![image](https://github.com/user-attachments/assets/a74fd28f-b27e-4587-ba86-03467fc7987b)
 
+Here are the results from all the models trained:
+
+![image](https://github.com/user-attachments/assets/0d503d8b-e275-402e-8080-e3bd6886647c)
+
+Judging by these metrics, I believe the Decision Tree model or Logistic Regression model would be best for our situation. The decision tree model trained the fastest and has the highest F1 score. If we want to maximize precision, we should pick the Logistic Regression model. It has a higher train time and slightly lower F1 score, but has the highest precision which is what we were aiming to maximize.
 
 ## Next Steps
 
